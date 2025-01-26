@@ -3,7 +3,7 @@
 void task1();
 void task2();
 void task3();
-//void task4();
+void task4();
 //void practicalWork1();
 //void practicalWork2();
 //void practicalWork3();
@@ -21,7 +21,7 @@ int main() {
 	std::cout << "1. Задача 1. Координатная плоскость.\n";
 	std::cout << "2. Задача 2. Банкомат.\n";
 	std::cout << "3. Задача 3. Високосный год (необязательная).\n";
-	std::cout << "4. Задача 1. Логические операторы и сложные условия\n";
+	std::cout << "4. Задача 1. Логические операторы и сложные условия.\n";
 	std::cout << "5. Задача 2. Мост и перегрузка.\n";
 	std::cout << "6. Задача 3. Треугольник.\n";
 	std::cout << "7. Задача 4. Совпадение чисел(необязательная).\n";
@@ -51,9 +51,9 @@ int main() {
 	case 3:
 		task3();
 		break;
-	//case 4:
-	//	task4();
-	//	break;
+	case 4:
+		task4();
+		break;
 	//case 5:
 	//	practicalWork1();
 	//	break;
