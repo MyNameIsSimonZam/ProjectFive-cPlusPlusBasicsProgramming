@@ -8,25 +8,17 @@
 суммы средств, введенной пользователем.*/
 
 void task2() {
-	//int product1 = 0;
-	//int product2 = 0;
-	//int product3 = 0;
-
-	//std::cout << "This program can calculate discount for you";
-	//std::cout << "Give me coast of the first product: ";
-	//std::cin >> product1;
-	//std::cout << "Give me coast of the second product: ";
-	//std::cin >> product2;
-	//std::cout << "Give me coast of the third product: ";
-	//std::cin >> product3;
-
-	//int receipt = product1 + product2 + product3;
-
-	//if (receipt > 10000) {
-	//	receipt *= 0.9;
-	//}
-	//
-	//std::cout << "The receipt amount is: " << receipt;
-
+	int sum;
+	std::cout << "This program show how much many ATM can give out";
+	std::cout << "Enter desired amount (from 100 till 100 000 and multiple of 100): ";
+	std::cin >> sum;
+	if (sum <= 100000) {
+		if (sum <= 0) std::cout << "Failed... 100 minimum\n";
+		else if (sum % 100 != 0) std::cout << "Failed... multiple of 100\n";
+		else std::cout << "Take your money " << sum << "\n";
+	}
+	else {
+		std::cout << "Failed... It's too much (100 000 maximum)\n";
+	}
 }
 
