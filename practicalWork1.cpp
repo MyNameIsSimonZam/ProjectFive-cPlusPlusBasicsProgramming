@@ -1,44 +1,42 @@
 #include <iostream>
 
-/*#include <iostream>
+/* Задача 1.
+Решите задачи к предыдущему уроку при помощи логических операторов.*/
 
-/*Задание 1. Минимум из двух чисел
-Что нужно сделать:
-Напишите программу, которая ищет минимальное значение из двух чисел.
-Пример 1
-Введите первое число: 45
-Введите второе число: 70
------Проверяем-----
-Наименьшее число: 45
-Пример 2
-Введите первое число: 45
-Введите второе число: 45
------Проверяем-----
-Числа равны!
-Советы и рекомендации:
-Учтите, что числа могут быть равны!
-Что оценивается:
-• Правильность нахождения минимального числа
-• Обработка всех возможных вариантов минимального из двух чисел
-• Использование конструкций else if и else*/
+void task211() {
+	int x;
+	int y;
 
-void practicalWork1(){
-	int a = 0;
-	int b = 0;
+	std::cout << "This program give you quorter for your coordinates\n";
+	std::cout << "Enter the x coordinate: ";
+	std::cin >> x;
+	std::cout << "Enter the y coordinate: ";
+	std::cin >> y;
 
-	std::cout << "This program find fewer number";
-	std::cout << "Give me first number: ";
-	std::cin >> a;
-	std::cout << "Give me second number: ";
-	std::cin >> b;
-	std::cout << "-----Проверяем-----" << "\n";
-	if (a > b) {
-		std::cout << "less number: " << b << "\n";
-	} else if (b > a) {
-		std::cout << "less number: " << a << "\n";
-	} else {
-		std::cout << "Numbers are equal" << "\n";
-	}
-
+	if (x > 0 && y > 0) std::cout << "Your coordinates in the first qourter\n";
+	if (x < 0 && y > 0) std::cout << "Your coordinates in the second qourter\n";
+	if (x < 0 && y < 0) std::cout << "Your coordinates in the third qourter\n";
+	if (x > 0 && y < 0) std::cout << "Your coordinates in the fourth qourter\n";
+	else std::cout << "Your coordinates on lays the borders\n";
 }
 
+void task212() {
+	int sum;
+	std::cout << "This program show how much many ATM can give out";
+	std::cout << "Enter desired amount (from 100 till 100 000 and multiple of 100): ";
+	std::cin >> sum;
+
+	if (sum > 0 && sum <= 100000 && sum % 100 == 0) std::cout << "Take your money " << sum << "\n";
+	else std::cout << "Failed... (from 100 till 100 000 and multiple of 100)\n";
+}
+
+void task213() {
+	int a;
+	std::cout << "Enter the year and I'll count whether it is a lip year or not: ";
+	std::cin >> a;
+	if (a % 4 == 0) {
+		if (a % 100 == 0 && a % 400 != 0) std::cout << "It's not a leap year\n";
+		else std::cout << "It's a leap year\n";
+	}
+	else std::cout << "It's not a leap year\n";
+}
