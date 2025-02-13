@@ -10,6 +10,7 @@ void task22();
 void task23();
 void task24();
 void task31();
+void task32();
 
 
 int main() {
@@ -71,9 +72,9 @@ int main() {
 	case 10:
 		task31();
 		break;
-	//case 11:
-	//	practicalWork7();
-	//	break;
+	case 11:
+		task32();
+		break;
 	//case 12:
 	//	practicalWork8();
 	//	break;

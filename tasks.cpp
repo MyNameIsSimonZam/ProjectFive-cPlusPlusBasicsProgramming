@@ -157,7 +157,9 @@ void task23() {
 	std::cin >> b;
 	std::cout << "Enter C line: ";
 	std::cin >> c;
-	if (a + b <= c, b + c <= a, a + c <= b) std::cout << "It's not possible to make a triangle with these lines";
+	if (a + b <= c || b + c <= a || a + c <= b) {
+		std::cout << "It's not possible to make a triangle with these lines \n";
+	}
 	else std::cout << "It's okay \n";
 }
 
@@ -188,8 +190,8 @@ void task24() {
 /*Задача 1. Военкомат.
 Для отбора летчиков устанавливаются жесткие критерии.
 Напишите программу, проверяющую, подходит ли призывник.
-Его рост должен быть не меньше 145см и не больше 165см, 
-вес не меньше 45кг и не больше 65кг, а количество рук и 
+Его рост должен быть не меньше 145см и не больше 165см,
+вес не меньше 45кг и не больше 65кг, а количество рук и
 ног должно обязательно совпадать(мы не знаем, зачем, но так требует инструкция).
 При этом берут любого человека, налетавшего на самолетах больше 100 часов.
 Дополнительно.
@@ -198,20 +200,65 @@ void task24() {
 if (eyeColor == “серо - буро - малиновый”) { … }*/
 
 void task31() {
+	int height;
+	int weight;
+	int handCount;
+	int legCount;
+	std::string eyeColor;
+	int flyHours;
+	std::cout << "Enter your flying hours: ";
+	std::cin >> flyHours;
+	if (flyHours > 100)	std::cout << "Congrats, everything allright\n";
+	else {
+		std::cout << "Enter your eyeColor: ";
+		std::cin >> eyeColor;
+		if (eyeColor == "green" || eyeColor == "Green") {
+			std::cout << "You are not suitable for us, get out \n";
+		}
+		else {
+			std::cout << "Entera a height of Pilot: ";
+			std::cin >> height;
+			std::cout << "Enter a weight of Pilot: ";
+			std::cin >> weight;
+			std::cout << "Enter count Pilot's hands: ";
+			std::cin >> handCount;
+			std::cout << "Enter count Pilot's legs: ";
+			std::cin >> legCount;
+			if (height >= 165 || height <= 145 || weight >= 65 || weight <= 45 || handCount != legCount) {
+				std::cout << "You are not suitable for us. \n";
+			}
+			else std::cout << "Congrats, everything allright\n";
+		}
+	}
+}
+
+/*Задача 2. — Входит... И выходит... И входит... Замечательно выходит!"Винни-Пух и день забот".
+У Винни - Пуха есть кирпич размера A на B на C.А еще есть стена,
+в которой проделано прямоугольное отверстие размера X на Y.
+Прежде чем подарить все это ослику Иа, Винни - Пух хочет знать,
+получится ли просунуть этот кирпич в это отверстие ? Напишите программу,
+которая по данным пяти числам отвечает на этот вопрос. Разумеется,
+кирпич можно поворачивать.*/
+
+void task32() {
 	int a;
 	int b;
 	int c;
-	std::cout << "Enter A number: ";
+	int x;
+	int y;
+	std::cout << "Enter a side: ";
 	std::cin >> a;
-	std::cout << "Enter B number: ";
+	std::cout << "Enter b side: ";
 	std::cin >> b;
-	std::cout << "Enter C number: ";
+	std::cout << "Enter c side: ";
 	std::cin >> c;
-	if (a == b && a == c) {
-		std::cout << "All three numbers are equal \n";
+	std::cout << "Enter x hole size: ";
+	std::cin >> x;
+	std::cout << "Enter y hole size: ";
+	std::cin >> y;
+	if (x == a || x == b || x == c) {
+		if (y == a || y == b || y == c)	std::cout << ""
 	}
-	else if (a == b || a == c) {
-		std::cout << "Only two numbers are equal \n";
-	}
-	else std::cout << "Not equal";
+
+
 }
