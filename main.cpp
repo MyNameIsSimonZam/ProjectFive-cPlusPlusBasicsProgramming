@@ -11,6 +11,7 @@ void task23();
 void task24();
 void task31();
 void task32();
+void task33();
 
 
 int main() {
@@ -75,9 +76,9 @@ int main() {
 	case 11:
 		task32();
 		break;
-	//case 12:
-	//	practicalWork8();
-	//	break;
+	case 12:
+		task33();
+		break;
 	//case 13:
 	//	practicalWork9();
 	//	break;
