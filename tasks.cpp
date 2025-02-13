@@ -257,8 +257,12 @@ void task32() {
 	std::cout << "Enter y hole size: ";
 	std::cin >> y;
 	if (x == a || x == b || x == c) {
-		if (y == a || y == b || y == c)	std::cout << ""
+		if (y == a || y == b || y == c)	std::cout << "It's comes in and goes out";
+		else std::cout << "It's not comes in and goes out";
 	}
-
-
+	if (y == a || y == b || y == c) {
+		if (x == a || x == b || x == c)	std::cout << "It's comes in and goes out";
+		else std::cout << "It's not comes in and goes out";
+	}
+	else std::cout << "It's not comes in and goes out";
 }
