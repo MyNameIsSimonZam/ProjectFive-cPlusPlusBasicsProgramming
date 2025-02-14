@@ -85,7 +85,7 @@ int main() {
 	case 22:
 		pW2();
 		break;
-	case 13:
+	case 23:
 		pW3();
 		break;
 	//case 13:
