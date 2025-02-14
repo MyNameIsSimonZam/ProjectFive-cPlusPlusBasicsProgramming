@@ -12,6 +12,7 @@ void task24();
 void task31();
 void task32();
 void task33();
+void pW1();
 
 
 int main() {
@@ -30,15 +31,12 @@ int main() {
 	std::cout << "11. Задача 2. — Входит... И выходит\n";
 	std::cout << "12. Задача 3. Пора обедать (необязательная).\n";
 	std::cout << "Or choose the number of the practical work to run:\n";
-	std::cout << "5. practical work 1\n";
-	std::cout << "6. practical work 2\n";
-	std::cout << "7. practical work 3\n";
-	std::cout << "8. practical work 4\n";
-	std::cout << "9. practical work 5\n";
-	std::cout << "10. practical work 6\n";
-	std::cout << "11. practical work 7\n";
-	std::cout << "12. practical work 8\n";
-	std::cout << "13. practical work 9\n";
+	std::cout << "21. practical work 1. Задание 1. Полёт нормальный!\n";
+	std::cout << "22. practical work 2. Задание 2. Майские!\n";
+	std::cout << "23. practical work 3. Задание 3. Майские — усложнение\n";
+	std::cout << "24. practical work 4. Задание 4. Банкомат — 2\n";
+	std::cout << "25. practical work 5. Задание 5. Усложнение задачи про кирпич\n";
+	std::cout << "25. practical work 6. Задание 6. Грустное совершеннолетие\n";
 	std::cout << "Enter your choice: ";
 	std::cin >> choice;
 
@@ -79,8 +77,23 @@ int main() {
 	case 12:
 		task33();
 		break;
+	case 13:
+		pW1();
+		break;
 	//case 13:
-	//	practicalWork9();
+	//	pW1();
+	//	break;
+	//case 13:
+	//	pW1();
+	//	break;
+	//case 13:
+	//	pW1();
+	//	break;
+	//case 13:
+	//	pW1();
+	//	break;
+	//case 13:
+	//	pW1();
 	//	break;
 	default:
 		std::cout << "Invalid choice. Exiting...\n";

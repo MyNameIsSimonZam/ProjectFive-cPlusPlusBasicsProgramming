@@ -282,3 +282,4 @@ void task33() {
 	if (n % 9 % 6 == 0 || n % 9 == 0 || n % 6 == 0 || n % 6 == 3) std::cout << "You can bye it\n";
 	else "You can't bye it\n";
 }
+
