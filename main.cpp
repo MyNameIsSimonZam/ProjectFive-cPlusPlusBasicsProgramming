@@ -13,6 +13,8 @@ void task31();
 void task32();
 void task33();
 void pW1();
+void pW2();
+void pW3();
 
 
 int main() {
@@ -77,15 +79,15 @@ int main() {
 	case 12:
 		task33();
 		break;
-	case 13:
+	case 21:
 		pW1();
 		break;
-	//case 13:
-	//	pW1();
-	//	break;
-	//case 13:
-	//	pW1();
-	//	break;
+	case 22:
+		pW2();
+		break;
+	case 13:
+		pW3();
+		break;
 	//case 13:
 	//	pW1();
 	//	break;
