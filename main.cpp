@@ -16,6 +16,8 @@ void pW1();
 void pW2();
 void pW3();
 void pW4();
+void pW5();
+void pW6();
 
 
 int main() {
@@ -39,7 +41,7 @@ int main() {
 	std::cout << "23. practical work 3. Задание 3. Майские — усложнение\n";
 	std::cout << "24. practical work 4. Задание 4. Банкомат — 2\n";
 	std::cout << "25. practical work 5. Задание 5. Усложнение задачи про кирпич\n";
-	std::cout << "25. practical work 6. Задание 6. Грустное совершеннолетие\n";
+	std::cout << "26. practical work 6. Задание 6. Грустное совершеннолетие\n";
 	std::cout << "Enter your choice: ";
 	std::cin >> choice;
 
@@ -92,12 +94,12 @@ int main() {
 	case 24:
 		pW4();
 		break;
-		//case 13:
-		//	pW1();
-		//	break;
-		//case 13:
-		//	pW1();
-		//	break;
+	case 25:
+		pW5();
+		break;
+	case 26:
+		pW6();
+		break;
 	default:
 		std::cout << "Invalid choice. Exiting...\n";
 	}

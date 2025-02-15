@@ -92,7 +92,7 @@ void pW3() {
 • Постарайтесь выдать самый оптимальный набор купюр.
 • Помните, что банкомат не может выдать за один раз более 150 000 рублей*/
 
-void pW4() {			 // НЕ СДЕЛАНО
+void pW4() {
 	int sum;
 	std::cout << "This program show how much many ATM can give out\n";
 	std::cout << "Enter desired amount (from 100 till 150 000 and multiple of 100): ";
@@ -130,3 +130,93 @@ void pW4() {			 // НЕ СДЕЛАНО
 	}
 }
 
+/*Задание 5. Усложнение задачи про кирпич
+Что нужно сделать
+Напишите программу, которая проверяет, можно ли первую коробку положить внутрь второй.
+Условие:
+В модуле вы разобрали, как написать программу для проверки, удастся ли поместить кирпич
+определённых размеров в определённое прямоугольное отверстие.
+Теперь представьте, что у вас есть две коробки. Одна размером A × B × C, а другая — M × N × K.
+Напишите программу, которая по шести данным числам A, B, C, M, N, K проверяет,
+можно ли первую коробку положить внутрь второй.
+Коробки можно как угодно переворачивать, но одна коробка должна помещаться в другую целиком.
+Советы и рекомендации
+• Одна коробка в другую должна помещаться по всем трём измерениям.
+• Постарайтесь сделать свою программу по возможности лаконичнее*/
+
+void pW5() {
+	int a;
+	int b;
+	int c;
+	int m;
+	int n;
+	int k;
+	std::cout << "Enter a side of the first box: ";
+	std::cin >> a;
+	std::cout << "Enter b side of the first box: ";
+	std::cin >> b;
+	std::cout << "Enter c side of the first box: ";
+	std::cin >> c;
+	std::cout << "Enter m size of the second box: ";
+	std::cin >> m;
+	std::cout << "Enter n size of the second box: ";
+	std::cin >> n;
+	std::cout << "Enter k size of the second box: ";
+	std::cin >> k;
+	if (a < m || a < n || a < k) {
+		if (b < m || b < n || b < k) {
+			if (c < m || c < n || c < k) std::cout << "It's comes in\n";
+			else std::cout << "It's not comes in\n";
+		}
+		else std::cout << "It's not comes in\n";
+	}
+	else std::cout << "It's not comes in\n";
+}
+
+/*Задание 6. Грустное совершеннолетие
+Что нужно сделать
+Напишите программу для бармена, который не умеет считать.
+Условие:
+Посетитель пришёл в бар и попросил кружку пива.
+Напишите программу для бармена, который не умеет считать, чтобы по
+заданной дате рождения посетителя и текущей дате определить,
+можно ему продавать алкоголь или нет.
+Программа должна попросить ввести сегодняшнюю дату и дату рождения покупателя,
+после чего ответить : «можно» или «нельзя».
+Учтите, что в день восемнадцатилетия алкоголь продавать посетителю ещё нельзя,
+а вот на следующий день после этого — уже можно.
+Советы и рекомендации
+• Программа должна работать с любым годом и не должна быть привязана к определённой дате.
+• Постарайтесь сделать свою программу по возможности лаконичнее*/
+
+void pW6() {
+	int dayBirth;
+	int monthBirth;
+	int yearBirth;
+	int dayToday;
+	int monthToday;
+	int yearToday;
+	std::cout << "This program can calculate the age of an alcoholic\n";
+	std::cout << "Give me the day of your birthday: dd ";
+	std::cin >> dayBirth;
+	std::cout << "Give me the month of your birthday: mm ";
+	std::cin >> monthBirth;
+	std::cout << "Give me the year of your birthday: yyyy ";
+	std::cin >> yearBirth;
+	std::cout << "What is day today: dd ";
+	std::cin >> dayToday;
+	std::cout << "What is day today: mm ";
+	std::cin >> monthToday;
+	std::cout << "What is day today: yyyy ";
+	std::cin >> yearToday;
+	if (yearToday - yearBirth > 18) std::cout << "It's okay\n";
+	else if (monthToday - monthBirth == 18) {
+		if (monthToday - monthBirth > 0)   std::cout << "It's okay\n";
+		else if (monthToday - monthBirth == 0) {
+			if (dayToday - dayBirth > 0)   std::cout << "It's okay\n";
+			else std::cout << "Get out!\n";
+		}
+		else std::cout << "Get out!\n";
+	}
+	else std::cout << "Get out!\n";
+}
