@@ -15,6 +15,7 @@ void task33();
 void pW1();
 void pW2();
 void pW3();
+void pW4();
 
 
 int main() {
@@ -88,15 +89,15 @@ int main() {
 	case 23:
 		pW3();
 		break;
-	//case 13:
-	//	pW1();
-	//	break;
-	//case 13:
-	//	pW1();
-	//	break;
-	//case 13:
-	//	pW1();
-	//	break;
+	case 24:
+		pW4();
+		break;
+		//case 13:
+		//	pW1();
+		//	break;
+		//case 13:
+		//	pW1();
+		//	break;
 	default:
 		std::cout << "Invalid choice. Exiting...\n";
 	}
